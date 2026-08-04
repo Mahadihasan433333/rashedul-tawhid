@@ -3,8 +3,8 @@
 Official portfolio web application for **Rashedul Tawhid**, featuring high-definition narrative feature film showreels, commercial campaigns, interactive before/after color LUT grading, and technical camera rig breakdowns.
 
 ## 🚀 Live Demo & Deployment
-Hosted on **GitHub Pages**:
-`https://<your-username>.github.io/rashedul-tawhid-website/`
+Hosted on **GitHub Pages**:  
+👉 **`https://mahadihasan433333.github.io/rashedul-tawhid/`**
 
 ## 🎬 Technical Features
 - **Aspect Ratio Switcher**: Native widescreen toggle (2.39:1 Anamorphic, 16:9 Cinema, 4:3 Vintage Academy).
