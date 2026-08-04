@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rashedul Tawhid | Director of Photography & Cinematographer</title>
+  <meta name="description" content="Official portfolio of Rashedul Tawhid, Cinematographer & Director of Photography featuring feature films, commercials, music videos, and technical craft." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="ratio-anamorphic">
+
+  <!-- Dynamic Ambient Glowing Orbs -->
+  <div class="ambient-orb orb-1" aria-hidden="true"></div>
+  <div class="ambient-orb orb-2" aria-hidden="true"></div>
+  <div class="ambient-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Film Grain Overlay -->
+  <div class="film-grain" id="filmGrain" aria-hidden="true"></div>
+  
+  <!-- Anamorphic Viewport Border Frame -->
+  <div class="viewfinder-overlay" aria-hidden="true">
+    <div class="frame-corner top-left"></div>
+    <div class="frame-corner top-right"></div>
+    <div class="frame-corner bottom-left"></div>
+    <div class="frame-corner bottom-right"></div>
+    
+    <div class="cam-info-bar top-bar">
+      <div class="bar-group-left">
+        <span class="rec-badge"><i class="fa-solid fa-circle"></i> STBY</span>
+        <span class="fps-badge">24.000 FPS</span>
+        <span class="shutter-badge">180.0° SHUTTER</span>
+      </div>
+      <div class="bar-group-right">
+        <span class="wb-badge">5600K DAYLIGHT</span>
+      </div>
+    </div>
+    <div class="cam-info-bar bottom-bar">
+      <span class="aspect-indicator">RATIO: <strong id="currentRatioText">2.39:1 ANAMORPHIC</strong></span>
+      <span class="sensor-badge">ARRI ALEXA 35 / COOKE ANAMORPHIC</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo" aria-label="Rashedul Tawhid Portfolio Home">
+        <span class="logo-mark">RT</span>
+        <span class="logo-text">RASHEDUL TAWHID <small>DIRECTOR OF PHOTOGRAPHY</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#showreel" class="nav-link"><i class="fa-solid fa-play"></i> Reel</a>
+        <a href="#projects" class="nav-link">Selected Work</a>
+        <a href="#color-grade" class="nav-link">Color & Light</a>
+        <a href="#gear" class="nav-link">The Rig</a>
+        <a href="#simulator" class="nav-link">Simulator</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="btn btn-primary btn-sm nav-btn">Inquire</a>
+      </nav>
+
+      <!-- Aspect Ratio Quick Switcher -->
+      <div class="aspect-switcher-widget">
+        <span class="switcher-label"><i class="fa-solid fa-expand"></i> Aspect</span>
+        <div class="switcher-buttons">
+          <button class="ratio-btn active" data-ratio="anamorphic" title="2.39:1 Anamorphic Widescreen">2.39:1</button>
+          <button class="ratio-btn" data-ratio="standard" title="16:9 Standard Cinema">16:9</button>
+          <button class="ratio-btn" data-ratio="vintage" title="4:3 Classic Vintage">4:3</button>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose" aria-label="Close Menu">&times;</button>
+    <a href="#showreel" class="drawer-link">Showreel</a>
+    <a href="#projects" class="drawer-link">Selected Work</a>
+    <a href="#color-grade" class="drawer-link">Color & Lighting</a>
+    <a href="#gear" class="drawer-link">The Rig</a>
+    <a href="#simulator" class="drawer-link">Simulator</a>
+    <a href="#about" class="drawer-link">About & Press</a>
+    <a href="#contact" class="btn btn-primary drawer-btn">Book / Inquire</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (LINKED TO YOUR MAIN BGG IMAGE) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-container">
+        <div class="video-placeholder-container">
+          <img src="assets/main bgg.jpg" alt="Rashedul Tawhid Cinematography Reel Cover" class="hero-bg-img" id="heroPoster" />
+          <div class="video-overlay-tint"></div>
+          <div class="anamorphic-flare-effect cyan-flare" aria-hidden="true"></div>
+          <div class="anamorphic-flare-effect gold-flare" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-tag-badge">
+          <i class="fa-solid fa-clapperboard"></i> International Cinematographer
+        </div>
+        <h1 class="hero-title">
+          Mastering <span class="text-highlight-gold">Light & Shadow.</span><br/>
+          Framing <span class="text-highlight-white">Unforgettable Emotion.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Specializing in narrative feature films, high-concept commercials, and striking visual storytelling worldwide.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" id="playReelBtn" data-video="videos/showreel.mp4">
+            <i class="fa-solid fa-play"></i> Watch 2026 Showreel <small>(2:15)</small>
+          </button>
+          <a href="#projects" class="btn btn-glass btn-lg">
+            Explore Filmography <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num stat-gold">45+</span>
+            <span class="stat-label">Films & Campaigns</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num stat-white">12</span>
+            <span class="stat-label">Global Awards</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num stat-gold">35mm / Digital</span>
+            <span class="stat-label">Anamorphic Master</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWREEL LIGHTBOX / MODAL SECTION -->
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-container">
+        <button class="modal-close" id="modalClose" aria-label="Close Video">&times;</button>
+        <div class="modal-video-wrapper">
+          
+          <!-- Dynamic Player Container -->
+          <div class="simulated-player" id="videoPlayerContainer">
+            <!-- Native High-Performance HTML5 Player -->
+            <video id="nativeVideoPlayer" controls autoplay playsinline class="native-html5-player" style="display: none;">
+              <source id="videoSource" src="videos/showreel.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- iFrame Player for Youtube / Vimeo Embeds -->
+            <iframe id="videoIframe" src="" class="embed-iframe" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen style="display: none;"></iframe>
+            
+            <!-- Fallback Graphic Container -->
+            <div id="fallbackPoster" class="fallback-poster-wrapper">
+              <img src="assets/main bgg.jpg" alt="Showreel Video" class="modal-poster-img" />
+              <div class="player-controls">
+                <button class="player-btn" id="playPauseBtn" aria-label="Pause Video"><i class="fa-solid fa-pause"></i></button>
+                <div class="player-progress">
+                  <div class="progress-bar" style="width: 45%;"></div>
+                </div>
+                <span class="player-time">01:02 / 02:15</span>
+                <button class="player-btn" id="soundBtn" aria-label="Mute Sound"><i class="fa-solid fa-volume-high"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-meta">
+            <h3 class="text-highlight-gold" id="videoModalTitle">Rashedul Tawhid — Cinematography Showreel 2026</h3>
+            <p id="videoModalSpecs">Captured on ARRI Alexa 35 & RED V-Raptor XL using Cooke Anamorphic/i Full Frame & Leica Summilux glass.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELECTED PROJECTS GALLERY -->
+    <section class="section-padding projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle badge-gold"><i class="fa-solid fa-film"></i> Filmography</span>
+          <h2 class="section-title">Selected Works</h2>
+          <p class="section-description">Curated narrative feature films, commercial campaigns, and music videos.</p>
+          
+          <!-- Category Filters -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="narrative">Narrative & Feature</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="musicvideo">Music Video</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 (LINKED TO YOUR LOCAL FEATURE FILM VIDEO FILE) -->
+          <div class="project-card card-gold-glow" data-category="narrative">
+            <div class="card-thumb-wrapper">
+              <img src="assets/project_thumb_1_1785802595988.jpg" alt="The Golden Echo" class="card-img" />
+              <div class="card-badge badge-gold">Feature Film</div>
+              <div class="card-overlay">
+                <button class="btn btn-primary btn-circle play-project-btn" data-title="The Golden Echo (Feature Film Reel)" data-url="videos/feature film.mp4" aria-label="Play The Golden Echo">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag-gold">Dir: Marcus Vance</span> &bull; <span>2025</span>
+              </div>
+              <h3 class="card-title">The Golden Echo</h3>
+              <p class="card-excerpt">Atmospheric thriller shot entirely with natural tungsten lighting and vintage anamorphic optics.</p>
+              <div class="card-specs-footer">
+                <span><i class="fa-solid fa-camera"></i> ARRI Alexa LF</span>
+                <span><i class="fa-solid fa-glasses"></i> Cooke Anamorphic 2x</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card card-gold-glow" data-category="commercial">
+            <div class="card-thumb-wrapper">
+              <img src="assets/project_thumb_2_1785802609370.jpg" alt="Aura Cyberpunk Campaign" class="card-img" />
+              <div class="card-badge badge-blue">Commercial</div>
+              <div class="card-overlay">
+                <button class="btn btn-primary btn-circle play-project-btn" data-title="Aura — Neon Horizons" data-url="videos/showreel.mp4" aria-label="Play Aura Commercial">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag-blue">Client: Aura Tech</span> &bull; <span>2026</span>
+              </div>
+              <h3 class="card-title">Aura — Neon Horizons</h3>
+              <p class="card-excerpt">High-speed motion control camera work paired with saturated neon tube lighting setups.</p>
+              <div class="card-specs-footer">
+                <span><i class="fa-solid fa-camera"></i> RED V-Raptor 8K</span>
+                <span><i class="fa-solid fa-glasses"></i> Leica Summilux-C</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 (LINKED TO YOUR LOCAL MUSIC VIDEO FILE) -->
+          <div class="project-card card-gold-glow" data-category="musicvideo">
+            <div class="card-thumb-wrapper">
+              <img src="assets/project_thumb_3_1785802622599.jpg" alt="Velvet Noise" class="card-img" />
+              <div class="card-badge badge-gold">Music Video</div>
+              <div class="card-overlay">
+                <button class="btn btn-primary btn-circle play-project-btn" data-title="Velvet Noise — Echoes (Official Music Video)" data-url="videos/music video.mp4" aria-label="Play Velvet Noise Music Video">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-info">
+              <div class="card-tags">
+                <span class="tag-gold">Artist: Midnight Collective</span> &bull; <span>2025</span>
+              </div>
+              <h3 class="card-title">Velvet Noise — Echoes</h3>
+              <p class="card-excerpt">Experimental optical filters, smoke haze choreography, and intense dynamic lens flares.</p>
+              <div class="card-specs-footer">
+                <span><i class="fa-solid fa-camera"></i> Sony Venice 2</span>
+                <span><i class="fa-solid fa-glasses"></i> ARRI Master Primes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE COLOR GRADING & LUT COMPARISON SECTION -->
+    <section class="section-padding color-grade-section" id="color-grade">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle badge-gold"><i class="fa-solid fa-sliders"></i> Color Science & Craft</span>
+          <h2 class="section-title">The Art of Color Craft</h2>
+          <p class="section-description">Interactive comparison: Drag the slider to transform raw camera LOG sensor data into final calibrated print film LUT color profiles.</p>
+        </div>
+
+        <div class="lut-slider-wrapper" id="lutSliderContainer">
+          <!-- Before (RAW LOG) -->
+          <div class="lut-image lut-before">
+            <img src="assets/project_log_raw_1785802572124.jpg" alt="Raw ARRI Log C4 Profile" />
+            <span class="lut-tag tag-left">UNGRADED RAW LOG C4</span>
+          </div>
+          <!-- After (GRADED LUT) -->
+          <div class="lut-image lut-after" id="lutAfterImage">
+            <img src="assets/project_graded_lut_1785802584550.jpg" alt="Final Color Graded Film Print" />
+            <span class="lut-tag tag-right tag-gold-bg">KODAK 5219 FILM PRINT LUT</span>
+          </div>
+          <!-- Drag Handle -->
+          <div class="lut-handle" id="lutHandle" role="slider" aria-label="Color LUT Comparison Slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="handle-line"></div>
+            <div class="handle-button">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+            <div class="handle-line"></div>
+          </div>
+        </div>
+
+        <div class="lut-notes">
+          <div class="note-card card-gold-border">
+            <i class="fa-solid fa-circle-half-stroke icon-gold"></i>
+            <div>
+              <h4 class="text-gold">17+ Stops Dynamic Range</h4>
+              <p>Preserving smooth highlight roll-off and deep clean rich shadow detail.</p>
+            </div>
+          </div>
+          <div class="note-card card-gold-border">
+            <i class="fa-solid fa-palette icon-gold"></i>
+            <div>
+              <h4 class="text-gold">Custom 3D Emulation LUT</h4>
+              <p>Designed during pre-production lens testing to match vintage Kodak film stocks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DP TOOLKIT / GEAR BREAKDOWN SECTION -->
+    <section class="section-padding gear-section" id="gear">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle badge-gold"><i class="fa-solid fa-gear"></i> Technical Ecosystem</span>
+          <h2 class="section-title">The Cinematographer's Rig</h2>
+          <p class="section-description">Core camera packages, specialized glass, and precision lighting systems trusted for high-end productions.</p>
+        </div>
+
+        <div class="gear-grid">
+          <!-- Camera Bodies -->
+          <div class="gear-card card-gold-glow">
+            <div class="gear-icon icon-gold-bg"><i class="fa-solid fa-video"></i></div>
+            <h3 class="text-gold">Camera Systems</h3>
+            <ul class="gear-list">
+              <li><strong>ARRI Alexa 35</strong> — 4.6K Super 35 Sensor</li>
+              <li><strong>ARRI Alexa LF / Mini LF</strong> — Large Format Digital</li>
+              <li><strong>RED V-Raptor 8K VV</strong> — High Speed 120fps</li>
+              <li><strong>Sony Venice 2</strong> — Dual Native ISO 800/3200</li>
+              <li><strong>Arriflex 416</strong> — 16mm Film Body</li>
+            </ul>
+          </div>
+
+          <!-- Prime Optics -->
+          <div class="gear-card card-gold-glow">
+            <div class="gear-icon icon-gold-bg"><i class="fa-solid fa-eye"></i></div>
+            <h3 class="text-gold">Optics & Glass</h3>
+            <ul class="gear-list">
+              <li><strong>Cooke Anamorphic/i Full Frame</strong> (2x Squeeze)</li>
+              <li><strong>ARRI / Zeiss Master Primes</strong> (T1.3)</li>
+              <li><strong>Leica Summilux-C</strong> T1.4 Prime Set</li>
+              <li><strong>Kowa Evolution 2X</strong> Anamorphic Vintage</li>
+              <li><strong>Schneider Hollywood Black Magic</strong> Diffusion</li>
+            </ul>
+          </div>
+
+          <!-- Lighting & Grip -->
+          <div class="gear-card card-gold-glow">
+            <div class="gear-icon icon-gold-bg"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3 class="text-gold">Lighting & Control</h3>
+            <ul class="gear-list">
+              <li><strong>ARRI SkyPanel S60-C / S360-C</strong> DMX Wireless</li>
+              <li><strong>Aputure Electro Storm CS15</strong> 1500W RGBWW</li>
+              <li><strong>Astera Titan Tubes</strong> Wireless Pixel FX</li>
+              <li><strong>Matthews MAX Menace Arm</strong> & Grip Package</li>
+              <li><strong>CRLS Bartenbach Reflector Kit</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LIGHTING & SIMULATOR DEMO -->
+    <section class="section-padding simulator-section" id="simulator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle badge-gold"><i class="fa-solid fa-wand-magic-sparkles"></i> Interactive Lab</span>
+          <h2 class="section-title">Lighting & Frame Simulator</h2>
+          <p class="section-description">Test different color temperatures (Kelvin) and film grain textures live on frame.</p>
+        </div>
+
+        <div class="simulator-card">
+          <div class="sim-preview-area">
+            <div class="sim-frame" id="simFrame">
+              <img src="assets/main bgg.jpg" alt="Simulator Frame" id="simImage" />
+              <div class="sim-color-filter" id="simFilter"></div>
+              <div class="sim-readout">
+                <span id="readoutKelvin">COLOR TEMP: 5600K (DAYLIGHT)</span> &bull; 
+                <span id="readoutGrain">GRAIN: 35MM FINE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-controls">
+            <div class="control-group">
+              <label for="kelvinGroup"><i class="fa-solid fa-sun text-gold"></i> Lighting Color Temperature (Kelvin):</label>
+              <div class="preset-buttons" id="kelvinGroup">
+                <button class="sim-btn btn-tungsten active" data-kelvin="3200" data-label="3200K (Tungsten Warm)">3200K Tungsten</button>
+                <button class="sim-btn btn-daylight" data-kelvin="5600" data-label="5600K (Daylight Neutral)">5600K Daylight</button>
+                <button class="sim-btn btn-cool" data-kelvin="7500" data-label="7500K (Overcast Cool)">7500K Cool</button>
+                <button class="sim-btn btn-cyan" data-kelvin="cyan" data-label="Anamorphic Sci-Fi Cyan">Cyber Cyan</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="grainGroup"><i class="fa-solid fa-clapperboard text-gold"></i> Film Stock Texture & Grain:</label>
+              <div class="preset-buttons" id="grainGroup">
+                <button class="sim-btn active" data-grain="fine" data-grainlabel="35mm Fine Grain">35mm Fine</button>
+                <button class="sim-btn" data-grain="coarse" data-grainlabel="16mm Vintage Grain">16mm Vintage</button>
+                <button class="sim-btn" data-grain="none" data-grainlabel="Clean Digital Sensor">Clean Digital</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & PRESS / AWARDS -->
+    <section class="section-padding about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-bio">
+            <span class="section-subtitle badge-gold"><i class="fa-solid fa-user-ninja"></i> Biography</span>
+            <h2 class="section-title">Behind the Viewfinder</h2>
+            <p>
+              Rashedul Tawhid is an internationally acclaimed Director of Photography with over a decade of experience crafting high-impact visual narratives. Known for his painterly use of natural key light, bold composition, and deep technical mastery of both vintage optical glass and cutting-edge sensor technology.
+            </p>
+            <p>
+              Based in Dhaka & available for global assignments across Asia, Europe, and North America. Member of the International Cinematographers Guild (ICG).
+            </p>
+
+            <div class="bio-quote glow-quote">
+              <i class="fa-solid fa-quote-left text-gold"></i>
+              <blockquote>"Every frame must serve the emotional core of the script. Technique without story is just noise."</blockquote>
+            </div>
+          </div>
+
+          <div class="about-awards">
+            <h3 class="text-highlight-gold">Recognitions & Press</h3>
+            <ul class="awards-list">
+              <li>
+                <span class="award-year year-gold">2025</span>
+                <div class="award-info">
+                  <strong>Best Cinematography Award</strong> — Asian Film Festival
+                  <p>For feature film <em>The Golden Echo</em></p>
+                </div>
+              </li>
+              <li>
+                <span class="award-year year-gold">2024</span>
+                <div class="award-info">
+                  <strong>Gold Camera Cannes Lion Nominee</strong>
+                  <p>Aura International Commercial Campaign</p>
+                </div>
+              </li>
+              <li>
+                <span class="award-year year-gold">2023</span>
+                <div class="award-info">
+                  <strong>Featured in American Cinematographer Magazine</strong>
+                  <p>Issue #11: "Masters of Anamorphic Framing"</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / INQUIRY SECTION -->
+    <section class="section-padding contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card glow-card-gold">
+          <div class="contact-header text-center">
+            <span class="section-subtitle badge-gold"><i class="fa-solid fa-paper-plane"></i> Production Inquiry</span>
+            <h2 class="text-highlight-gold">Initiate a Collaboration</h2>
+            <p>Now booking feature films, commercial campaigns, and music videos for 2026/2027.</p>
+          </div>
+
+          <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); alert('Inquiry Sent! Rashedul Tawhid or management team will contact you shortly.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name / Production Co.</label>
+                <input type="text" id="name" required placeholder="e.g. Warner Bros / Jane Doe" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="jane@production.com" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="projectType">Project Type</label>
+                <select id="projectType">
+                  <option value="feature">Feature Film / Narrative</option>
+                  <option value="commercial">Commercial Campaign</option>
+                  <option value="musicvideo">Music Video</option>
+                  <option value="documentary">Documentary</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dates">Shoot Dates & Location</label>
+                <input type="text" id="dates" placeholder="e.g. Oct 2026 / London & Tokyo" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Project Synopsis & Visual Vision</label>
+              <textarea id="message" rows="4" placeholder="Tell us about the story, desired visual style, aspect ratio preference, or references..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <i class="fa-solid fa-paper-plane"></i> Send Booking Proposal
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-mark">RT</span>
+          <p>&copy; 2026 Rashedul Tawhid. All rights reserved. Designed for Cinema.</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="IMDb"><i class="fa-brands fa-imdb"></i> IMDb</a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="#" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i> Vimeo</a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

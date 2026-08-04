@@ -1,0 +1,8 @@
+# .gitignore file for Rashedul Tawhid Website
+# Ignore OS temporary files and scratch directories
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
